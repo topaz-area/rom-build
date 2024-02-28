@@ -1,5 +1,12 @@
 ## How To Adapt tree to build ROM
 
+If neede add :
+```
+  <remote name="github"
+          fetch="https://github.com"
+          revision="topaz-bengal-5.15" />
+```
+
 Add this line to the ROM manifest.xml before ```repo sync``` in the hardware/qcom-caf/common line :
 
 ```
@@ -11,11 +18,11 @@ Add this line to the ROM manifest.xml before ```repo sync``` in the hardware/qco
 Add this line to HAL repository line :
 
 ```
-  <project path="hardware/qcom-caf/sm6225/audio/agm" name="Xiaomi-SD685-Devs/vendor_qcom_opensource_agm" remote="github" revision="lineage-20.0-caf-sm6225" />
-  <project path="hardware/qcom-caf/sm6225/audio/pal" name="Xiaomi-SD685-Devs/vendor_qcom_opensource_arpal" remote="github" revision="lineage-20.0-caf-sm6225" />
-  <project path="hardware/qcom-caf/sm6225/audio/primary-hal" name="Xiaomi-SD685-Devs/hardware_qcom_audio" remote="github" revision="lineage-20.0-caf-sm6225" />
-  <project path="hardware/qcom-caf/sm6225/display" name="Xiaomi-SD685-Devs/hardware_qcom_display" remote="github" revision="lineage-20.0-caf-sm6225" />
-  <project path="hardware/qcom-caf/sm6225/media" name="Xiaomi-SD685-Devs/hardware_qcom_media" remote="github" revision="lineage-20.0-caf-sm6225" />
+  <project path="hardware/qcom-caf/sm6225/audio/agm" name="XIAOMI-SM6225-bengal-5-15/vendor_qcom_opensource_agm" remote="github" />
+  <project path="hardware/qcom-caf/sm6225/audio/pal" name="XIAOMI-SM6225-bengal-5-15/vendor_qcom_opensource_pal" remote="github" />
+  <project path="hardware/qcom-caf/sm6225/audio/primary-hal" name="XIAOMI-SM6225-bengal-5-15/hardware_qcom_audio" remote="github" />
+  <project path="hardware/qcom-caf/sm6225/display" name="XIAOMI-SM6225-bengal-5-15/hardware_qcom_display" remote="github" />
+  <project path="hardware/qcom-caf/sm6225/media" name="XIAOMI-SM6225-bengal-5-15/hardware_qcom_media" remote="github" />
 ```
 
 After successfully repo sync finished. Then pick this commit to your'e vendor/ROM :
@@ -33,7 +40,7 @@ Clone device tree to your initialize repo.
 Done! Compile the ROM.
 
 ## Adapt to Android 14 :
-- [Android 14 adaptations](https://github.com/Xiaomi-SD685-Devs/rom-build/blob/A14/README.md)
+- [Android 14 adaptations](https://github.com/topaz-area/rom-build/blob/A14/README.md)
 
 ## Notes :
 - We have a device with the bengal_515 platform.  It looks the same as bengal 4.19 legacy.
